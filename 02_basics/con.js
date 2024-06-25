@@ -16,8 +16,27 @@ tinderUser.isLoggedIn=false
 }
 console.log(regularUser.fullName.userfullName.firstName)*/
 
-const obj1={1:"a",2:"b"}
+/*const obj1={1:"a",2:"b"}
 const obj2={3:"c",4:"d"}
 
 const obj={...obj1,...obj2}//spread operator
-console.log(obj)
+console.log(obj)*/
+
+const course={
+  name:"JS in hindi",
+  price:"999",
+  course_instructor:"Bishnoi"
+}
+
+const {course_instructor:ye_naam}=course//object destructure
+
+console.log(ye_naam)
+
+//backend ka data in API format== JSON(object)
+/*{
+  "name":"Rohitash",
+  "Cname":"JS in hindi",
+  "Pirce":"free"
+}*/
+
+

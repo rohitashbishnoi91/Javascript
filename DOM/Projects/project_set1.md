@@ -36,3 +36,42 @@ buttons.forEach((button)=>{
 
 
 ```
+
+# PROJECT 2
+
+## project 2 solution
+
+```JavaScript
+const form=document.querySelector('form')
+
+
+form.addEventListener('submit',(event)=>{
+   event.preventDefault()
+
+   const height=parseInt(document.querySelector('#height').value)
+   const weight=parseInt(document.querySelector('#weight').value)
+   const results=document.querySelector('#results')
+
+   if(height<0 || height===''|| isNaN(height)){
+     results.innerHTML=`please give valid height ${height}`
+   }
+   else if(weight<0 || weight===''|| isNaN(weight)){
+    results.innerHTML=`please give valid height ${weight}`
+  }
+  else{
+    const BMI=(weight/((height*height)/10000)).toFixed(2)
+
+    results.innerHTML=`<span>${BMI}</span>`
+    if(BMI<18.6){
+       results.innerHTML=` ${BMI} you are under Weight , please increase your diet`
+    }
+    else if(BMI>24.9){
+       results.innerHTML=` ${BMI} you are overweight , increase exercising and decrease food intake`
+    }
+    else{
+      results.innerHTML=` ${BMI} you are fit , keep on exercising and have a healthy lifestyle`
+    }
+  }
+})
+
+```
